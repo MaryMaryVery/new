@@ -1,0 +1,43 @@
+fetch('
+http://localhost:8080/Owner
+',
+{
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    method: "POST",
+    body: JSON.stringify({Owner_id: 'user1', Owner_name: 'user1', phone:'email',city:'Vitebsk'})
+})
+.then(function(res){ console.log(res) })
+
+fetch('
+http://localhost:8080/Owner/4
+',
+{
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    method: "PUT",
+    body: JSON.stringify({Owner_id: '1', Owner_name: 'user2', phone:'+348554544',city:'Vitebsk'})
+})
+.then(function(res){ console.log(res) })
+
+fetch('
+http://localhost:8080/Artist/4
+',
+{
+    method: "DELETE"
+})fetch('
+  http://localhost:8080/Owner
+  ',
+  {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      method: "POST",
+      body: JSON.stringify({ Owner_name: 'user1'})
+  })
+  .then(function(res){ console.log(res) })
